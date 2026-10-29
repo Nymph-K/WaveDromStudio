@@ -1,0 +1,56 @@
+{
+  "signal": [
+    {
+      "name": "sclk",
+      "wave": "p..Pp..Pp..Pp..P"
+    },
+    {
+      "name": "cs_n",
+      "wave": "1...0...........1",
+      "node": "....a........."
+    },
+    [
+      "Master",
+      {
+        "name": "mosi",
+        "wave": "x.3x.4x.5x.6x..",
+        "data": [
+          "0x9F",
+          "0x00",
+          "0xAA",
+          "0x55"
+        ]
+      },
+      {
+        "name": "miso",
+        "wave": "x..4x.5x.6x.7x.",
+        "data": [
+          "0x01",
+          "0x02",
+          "0x03",
+          "0x04"
+        ]
+      }
+    ],
+    {
+      "name": "irq",
+      "wave": "0......1.....0."
+    }
+  ],
+  "edge": [
+    "a-|>a word boundary"
+  ],
+  "head": {
+    "text": "SPI transaction",
+    "tick": 0,
+    "every": 2
+  },
+  "foot": {
+    "text": "Nested group, bus labels and a relation marker",
+    "tock": 0
+  },
+  "config": {
+    "hscale": 1,
+    "skin": "default"
+  }
+}

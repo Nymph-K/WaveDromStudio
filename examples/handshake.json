@@ -1,0 +1,40 @@
+{
+  "signal": [
+    {
+      "name": "clk",
+      "wave": "p......."
+    },
+    {
+      "name": "req",
+      "wave": "0.1..0..",
+      "node": "....a..."
+    },
+    {
+      "name": "ack",
+      "wave": "0...10..",
+      "node": "...b...."
+    },
+    {
+      "name": "busy",
+      "wave": "0..1.0.."
+    },
+    {
+      "name": "done",
+      "wave": "0....1.0"
+    }
+  ],
+  "edge": [
+    "a~>b request"
+  ],
+  "head": {
+    "text": "Simple request / acknowledge handshake",
+    "tick": 0
+  },
+  "foot": {
+    "text": "A good starting point for experimenting with drawing"
+  },
+  "config": {
+    "hscale": 3,
+    "skin": "default"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "wavedrom-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A browser-based visual WaveJSON editor powered by the official WaveDrom SVG renderer.",
+  "license": "MIT",
+  "author": "Nymph-K",
+  "homepage": "https://github.com/Nymph-K/WaveDromStudio#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nymph-K/WaveDromStudio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nymph-K/WaveDromStudio/issues"
+  },
+  "keywords": [
+    "wavedrom",
+    "wavedrom-editor",
+    "wavejson",
+    "timing-diagram",
+    "waveform",
+    "json5",
+    "svg"
+  ],
+  "type": "module",
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "start": "vite --open",
+    "build": "tsc -b && vite build",
+    "build:single": "tsc -b && vite build --mode single --outDir dist-single",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "oxlint",
+    "check": "tsc -b && vitest run && oxlint"
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.11.1",
+    "@codemirror/lang-json": "^6.0.2",
+    "@codemirror/language": "^6.13.1",
+    "@codemirror/search": "^6.7.2",
+    "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.15",
+    "@lezer/highlight": "^1.2.5",
+    "json5": "^2.2.3",
+    "lucide-react": "^1.63.0",
+    "lz-string": "^1.5.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "wavedrom": "^3.8.0",
+    "zustand": "^5.0.16"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxlint": "^1.89.0",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.5",
+    "vite-plugin-singlefile": "^2.3.4",
+    "vitest": "^5.0.5"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "signal": [
+    {
+      "name": "clk",
+      "wave": "P..P..P..P..P..P"
+    },
+    [
+      "Master",
+      [
+        "Control",
+        {
+          "name": "write",
+          "wave": "01.0....1..0...."
+        },
+        {
+          "name": "read",
+          "wave": "0..01...0..01..."
+        }
+      ],
+      {
+        "name": "addr",
+        "wave": "x3.x4...x5.x....",
+        "data": [
+          "0x20",
+          "0x24",
+          "0x28"
+        ]
+      },
+      {
+        "name": "wdata",
+        "wave": "x.3.x...x.4.x...",
+        "data": [
+          "A5",
+          "5A"
+        ]
+      }
+    ],
+    {},
+    [
+      "Slave",
+      [
+        "ctrl",
+        {
+          "name": "ack",
+          "wave": "x0.1x....0.1x..."
+        }
+      ],
+      {
+        "name": "rdata",
+        "wave": "x....4x....5x...",
+        "data": [
+          "3C",
+          "C3"
+        ]
+      }
+    ]
+  ],
+  "head": {
+    "text": "Nested groups and an empty {} row",
+    "tick": 0,
+    "every": 4
+  },
+  "foot": {
+    "text": "Click a group bracket to select its lanes; Ctrl+G wraps, Ctrl+Shift+G ungroups",
+    "tock": 0
+  },
+  "config": {
+    "hscale": 1,
+    "skin": "default"
+  }
+}

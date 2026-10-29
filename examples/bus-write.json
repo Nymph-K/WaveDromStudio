@@ -1,0 +1,55 @@
+{
+  "signal": [
+    {
+      "name": "clk",
+      "wave": "p..Pp..Pp..Pp..P"
+    },
+    {
+      "name": "awvalid",
+      "wave": "0.1.........0..."
+    },
+    {
+      "name": "awready",
+      "wave": "0..1............"
+    },
+    {
+      "name": "awaddr",
+      "wave": "x.3x........x...",
+      "data": [
+        "0x1000"
+      ]
+    },
+    {
+      "name": "wvalid",
+      "wave": "0.....1.....0..."
+    },
+    {
+      "name": "wready",
+      "wave": "0.1............."
+    },
+    {
+      "name": "wdata",
+      "wave": "x.....4x........",
+      "data": [
+        "0xDEADBEEF"
+      ]
+    },
+    {
+      "name": "bready",
+      "wave": "1..............."
+    }
+  ],
+  "head": {
+    "text": "AXI write handshake",
+    "tick": 0,
+    "every": 4
+  },
+  "foot": {
+    "text": "Cycle-painted cells and data labels stay editable",
+    "tock": 0
+  },
+  "config": {
+    "hscale": 2,
+    "skin": "default"
+  }
+}
