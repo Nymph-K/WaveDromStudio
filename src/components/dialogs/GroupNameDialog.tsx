@@ -56,6 +56,7 @@ export default function GroupNameDialog({ rows }: { rows?: number[] }) {
           <span className="field-label">{t('Group name')}</span>
           <input
             ref={inputRef}
+            data-autofocus
             value={name}
             onChange={(event) => setName(event.target.value)}
             placeholder={t('e.g. Master')}

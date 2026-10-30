@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.0.1 — 2026-10-30
+
+### Fixed
+
+- Grouping selected signals now focuses and selects the group-name field immediately, so the default name can be replaced by typing.
+- New signals are inserted below the active/selected signal instead of at the end of the diagram.
+- Inline signal-name editing no longer re-selects the field after every keystroke; typed text is preserved.
+- The Chinese term for timing cycles is now **周期** instead of **循环** throughout the UI and documentation.
+
 ## v1.0.0 — 2026-10-30
 
 First public release.

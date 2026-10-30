@@ -45,11 +45,25 @@ export default function Dialog({ title, subtitle, icon, children, footer, onClos
       }
     };
     window.addEventListener('keydown', handleKey, true);
-    const firstInput = cardRef.current?.querySelector<HTMLElement>(
-      'input:not([type="hidden"]), textarea, select, button.primary, button',
-    );
-    window.setTimeout(() => firstInput?.focus(), 30);
+    const focusTimer = window.setTimeout(() => {
+      const card = cardRef.current;
+      if (!card) return;
+      // querySelector returns the first match in document order, so a selector
+      // list would focus the header close button before a form field.
+      const target = card.querySelector<HTMLElement>('[data-autofocus]')
+        || card.querySelector<HTMLElement>('input:not([type="hidden"])')
+        || card.querySelector<HTMLElement>('textarea')
+        || card.querySelector<HTMLElement>('select')
+        || card.querySelector<HTMLElement>('button.primary')
+        || card.querySelector<HTMLElement>('button');
+      if (!target) return;
+      target.focus();
+      if (target instanceof HTMLInputElement && target.hasAttribute('data-autofocus')) {
+        target.select();
+      }
+    }, 40);
     return () => {
+      window.clearTimeout(focusTimer);
       window.removeEventListener('keydown', handleKey, true);
       previous?.focus?.();
     };

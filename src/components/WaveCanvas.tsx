@@ -387,13 +387,16 @@ export default function WaveCanvas({ doc }: { doc: ReturnType<typeof useAppStore
     };
   }, []);
 
+  const inlineEditKey = inlineEdit?.key;
   useEffect(() => {
-    if (!inlineEdit) return;
+    if (!inlineEditKey) return;
     const input = inlineInputRef.current;
     if (!input) return;
     input.focus();
     input.select();
-  }, [inlineEdit]);
+    // Only select the initial value when a different field is opened. Depending
+    // on the whole inlineEdit object re-selected the text after every keystroke.
+  }, [inlineEditKey]);
 
   // Restore the per-tab scroll position after the diagram has a size.
   useEffect(() => {

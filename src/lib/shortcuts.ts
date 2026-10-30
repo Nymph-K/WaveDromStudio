@@ -42,7 +42,7 @@ export const SHORTCUT_ACTIONS: ShortcutAction[] = [
   { id: 'nav.selectRow', label: 'Select current row', category: 'Selection', defaultKeys: ['Ctrl+Space'] },
 
   // Signals
-  { id: 'signal.add', label: 'Add signal at end', category: 'Signals', defaultKeys: ['Ctrl+Enter'] },
+  { id: 'signal.add', label: 'Add signal below selection', category: 'Signals', defaultKeys: ['Ctrl+Enter'] },
   { id: 'signal.insertAbove', label: 'Insert signal above', category: 'Signals', defaultKeys: ['Insert'] },
   { id: 'signal.insertBelow', label: 'Insert signal below', category: 'Signals', defaultKeys: ['Ctrl+Insert'] },
   { id: 'signal.addEmpty', label: 'Insert empty {} row', category: 'Signals', defaultKeys: ['Ctrl+Shift+Insert'] },

@@ -14,7 +14,6 @@ import type {
 import {
   activeCellFromSelection,
   addEmptyRow,
-  appendLane,
   clampSelection,
   clearCells,
   clockLength,
@@ -1304,12 +1303,14 @@ export const useAppStore = create<AppStore>((set, get) => {
       const state = get();
       const doc = findDoc(state, id);
       if (!doc) return;
-      applyMutator(doc.id, (draft) => appendLane(draft, makeLane(draft)), {
-        selection: (next) => {
-          const rows = rowCount(next);
-          return toCellSelection(rows - 1, 0);
-        },
-        toast: 'Signal added',
+      const selected = selectedSignalRows(doc);
+      const anchorRow = selected.length > 0
+        ? Math.max(...selected)
+        : doc.activeCell.row;
+      const insertRow = Math.min(rowCount(doc.data), anchorRow + 1);
+      applyMutator(doc.id, (draft) => insertLane(draft, insertRow, makeLane(draft)), {
+        selection: (next) => toCellSelection(Math.min(insertRow, Math.max(0, rowCount(next) - 1)), 0),
+        toast: 'Signal added below selection',
       });
     },
 

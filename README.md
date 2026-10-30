@@ -12,7 +12,7 @@ selection, label editors and group handles over the official geometry. The right
 JSON5, and both views stay in sync in real time.
 
 > 中文简介：基于官方 `wavedrom` 渲染引擎的 Web 版图形化 WaveJSON 编辑器，支持画布单元格绘制、左侧编辑工具、内联信号名 /
-> 总线标签编辑、拖拽排序、嵌套分组、循环增删、自适应时钟、多标签页、撤销/重做、中英文界面、关闭保存提示、剪贴板、URL 分享、
+> 总线标签编辑、拖拽排序、嵌套分组、周期增删、自适应时钟、多标签页、撤销/重做、中英文界面、关闭保存提示、剪贴板、URL 分享、
 > 本地草稿、亮/暗主题以及 SVG/PNG 导出。所有逻辑均在浏览器内运行，无后端依赖。
 > 中文文档：[README.zh-CN.md](README.zh-CN.md)。
 
@@ -26,7 +26,7 @@ The fastest way to start is the **[latest release](https://github.com/Nymph-K/Wa
   server, no network access required.
 - **`WaveDromStudio-one-click.zip`** — extract it and double-click `START.cmd` on Windows, or open
   `WaveDromStudio.html` directly on any OS.
-- **`wavedrom-studio-1.0.0-static.zip`** — the deployable static build for a web server.
+- **`wavedrom-studio-1.0.1-static.zip`** — the deployable static build for a web server.
 
 The application itself is also published as source in this repository.
 
@@ -136,7 +136,7 @@ normal keyboard painting.
 | Middle-click a cell | Toggle continuous insert mode |
 | Middle-drag across rows | Start a multi-row insert mode; the INS caret appears on every selected row |
 | Right-click | Editing context menu for cells, signals and groups |
-| `Ctrl+Enter` | Add a signal and immediately enter inline name editing |
+| `Ctrl+Enter` | Add a signal below the selection and immediately enter inline name editing |
 | Drag the divider | Resize the waveform/JSON split |
 
 The character palette in the waveform header is a clickable alternative to typing. All WaveDrom wave characters are
@@ -152,7 +152,7 @@ string and scrolls the editor to it.
 ### Signals and groups
 
 - **Group:** select rows (gutter, cells or Ctrl-click row grips) and press `Ctrl+G`, or use **Group** in the command bar /
-  context menu. Every selected row is included.
+  context menu. Every selected row is included, and the group-name field opens focused and selected for immediate typing.
 - **Ungroup:** select a complete group and press `Ctrl+Shift+G`.
 - **Copy/move:** `Ctrl+C` / `Ctrl+V` or the context menu copies signal blocks, including full nested groups; `Alt+↑/↓`
   moves selected rows and groups within their parent.
@@ -190,7 +190,7 @@ Some defaults:
 | Action | Default |
 | --- | --- |
 | Paint / navigate | Character keys and arrow keys |
-| Add signal + edit name | `Ctrl+Enter` |
+| Add signal below selection + edit name | `Ctrl+Enter` |
 | Undo / redo | `Ctrl+Z` / `Ctrl+Shift+Z` |
 | Delete cycles / clear to `.` | `Delete` / `Shift+Delete` |
 | Insert cycle before / after | `Ctrl+Shift+←` / `Ctrl+Shift+→` |

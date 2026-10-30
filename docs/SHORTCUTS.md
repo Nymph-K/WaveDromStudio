@@ -26,7 +26,7 @@ WaveDrom Studio ships with a full, remappable keyboard workflow. Press <kbd>F1</
 | Edit signal name inline | <kbd>F2</kbd> |
 | Group selected signals… | <kbd>Ctrl + G</kbd> |
 | Ungroup selected signals | <kbd>Ctrl + Shift + G</kbd> |
-| Add signal at end + edit name | <kbd>Ctrl + Enter</kbd> |
+| Add signal below selection + edit name | <kbd>Ctrl + Enter</kbd> |
 | Fit clocks to longest lane | <kbd>Ctrl + Shift + 9</kbd> |
 | Copy share link | <kbd>Ctrl + Shift + L</kbd> |
 | Waveform only | <kbd>Ctrl + 1</kbd> |
@@ -92,7 +92,7 @@ WaveDrom Studio ships with a full, remappable keyboard workflow. Press <kbd>F1</
 
 | Action | Default binding |
 | --- | --- |
-| Add signal at end + edit name | <kbd>Ctrl + Enter</kbd> |
+| Add signal below selection + edit name | <kbd>Ctrl + Enter</kbd> |
 | Insert signal above | <kbd>Insert</kbd> |
 | Insert signal below | <kbd>Ctrl + Insert</kbd> |
 | Insert empty {} row | <kbd>Ctrl + Shift + Insert</kbd> |

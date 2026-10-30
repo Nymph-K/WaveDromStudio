@@ -71,7 +71,7 @@ export default function CommandBar() {
         </button>
       </div>
       <div className="command-divider" />
-      <button type="button" className="command-button primary-soft" onClick={() => addSignal(doc.id)} title={withHint('Add signal at end', 'signal.add')}>
+      <button type="button" className="command-button primary-soft" onClick={() => addSignal(doc.id)} title={withHint('Add signal below selection', 'signal.add')}>
         <Plus size={14} />
         <span>{t('Signal')}</span>
       </button>
